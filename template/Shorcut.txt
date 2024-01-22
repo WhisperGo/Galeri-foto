@@ -1,0 +1,4 @@
+[
+	{"keys": ["alt+shift+x"], "command": "reindent", "args": {"single_line": false}},
+
+] 
