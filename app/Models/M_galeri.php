@@ -5,9 +5,9 @@ use CodeIgniter\Model;
 
 class M_galeri extends Model
 {		
-	protected $table      = 'album';
-	protected $primaryKey = 'id_album';
-	protected $allowedFields = ['nama_album'];
+	protected $table      = 'gambar';
+	protected $primaryKey = 'id_gambar';
+	protected $allowedFields = ['nama_gambar', 'album_gambar', 'like_gambar', 'komen_gambar', 'user'];
 	protected $useSoftDeletes = true;
 	protected $useTimestamps = true;
 
