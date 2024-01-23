@@ -30,7 +30,7 @@
 											<div class="mb-3">
 												<div class="custom-file">
 													<div class="col-12 col-md-12">
-														<input type="file" class="logo-perusahaan" id="gambar_album" name="gambar_album" accept="image/*" required>
+														<input type="file" class="logo-perusahaan" id="gambar_album" name="gambar_album" accept="image/*">
 													</div>
 												</div>
 											</div>
@@ -38,15 +38,13 @@
 										</div>
 
 										<div class="mb-3">
-											<label for="namasiswa" class="form-label">Album Gambar</label>
-											<select class="form-select" id="album" placeholder="Masukkan Album Gambar" name="album" required>
-												<option value="">- Pilih -</option>
-												<?php 
-												foreach ($album as $a) {
-													?>
-													<option value="<?= $a->id_album?>"><?= $a->nama_album?></option>								
-												<?php } ?>
-											</select>
+											<label for="namaalbum" class="form-label">Nama Album</label>
+											<input type="text" class="form-control" id="nama_album" placeholder="Masukkan Nama Album" name="nama_album" required>
+										</div>
+
+										<div class="mb-3">
+											<label for="namasiswa" class="form-label">Deskripsi Album</label>
+											<textarea class="form-control" id="deskripsi_album" rows="3" name="deskripsi_album" placeholder="Masukkan Deskripsi Album (Opsional)" style="height: 100px;"></textarea>
 										</div>
 
 										<!-- bagian tombol submit -->

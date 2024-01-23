@@ -1,3 +1,9 @@
+<?php 
+
+$uri = service('uri');
+
+?>
+
 <main id="main" data-aos="fade" data-aos-delay="1500">
 
   <!-- ======= End Page Header ======= -->
@@ -5,15 +11,18 @@
     <div class="container position-relative">
       <div class="row d-flex justify-content-center">
         <div class="col-lg-6 text-center">
-          <h2>My Album</h2>
-          <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+          <!-- Gunakan nama_album yang sudah diambil dari controller -->
+          <h2><?=$nama_album?></h2>
+          <p><?= $deskripsi_album ?></p>
 
-          <a href="<?= base_url('album/tambah_album') ?>" class="cta-btn">Add Album</a>
-
+          <a href="<?= base_url('album/tambah_gambar') ?>" class="cta-btn">Add New Image</a>
+          <a href="<?= base_url('album/hapus_album/' . $uri->getSegment(3)) ?>" class="cta-btn-danger">Delete This Album</a>
         </div>
       </div>
     </div>
   </div><!-- End Page Header -->
+
+
 
   <!-- ======= Gallery Section ======= -->
   <section id="gallery" class="gallery">

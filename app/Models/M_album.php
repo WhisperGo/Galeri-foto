@@ -15,6 +15,25 @@ class M_album extends Model
 	{
 		return $this->db->table($table1)->where('deleted_at', null)->get()->getResult();
 	}
+	public function tampilAlbumUser()
+	{
+		$idUser = session()->get('id');
+        // Ambil data album berdasarkan user ID
+		return $this->db->table($this->table)
+		->where('user', $idUser)
+		->where('deleted_at', null)
+		->orderBy('created_at', 'DESC')
+		->get()
+		->getResult();
+	}
+	 public function getGambarByAlbumId($id)
+    {
+        // Ambil data gambar berdasarkan id_album
+        return $this->db->table('gambar')
+            ->where('album_gambar', $id)
+            ->get()
+            ->getResult();
+    }
 	public function hapus($table, $where)
 	{
 		return $this->db->table($table)->delete($where);
@@ -43,6 +62,35 @@ class M_album extends Model
 		->get()
 		->getResult();
 	}
+
+	public function getNamaAlbumById($id)
+	{
+        // Ambil nama_album berdasarkan ID album
+		$album = $this->find($id);
+
+        // Periksa apakah album ditemukan
+		if ($album) {
+			return $album['nama_album'];
+		}
+
+        // Jika album tidak ditemukan, kembalikan teks default atau sesuaikan sesuai kebutuhan
+		return 'Album Tidak Ditemukan';
+	}
+
+	public function getDeskripsiAlbumById($id)
+	{
+        // Ambil nama_album berdasarkan ID album
+		$album = $this->find($id);
+
+        // Periksa apakah album ditemukan
+		if ($album) {
+			return $album['deskripsi_album'];
+		}
+
+        // Jika album tidak ditemukan, kembalikan teks default atau sesuaikan sesuai kebutuhan
+		return 'Album Tidak Ditemukan';
+	}
+
 
 	//CI4 Model
 	public function deletee($id)

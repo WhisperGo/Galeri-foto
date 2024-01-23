@@ -134,8 +134,26 @@ h6 {
   background: var(--color-primary);
 }
 
+.page-header .cta-btn-danger {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  color: #fff;
+  background: #dc3545;
+}
+
 .page-header .cta-btn:hover {
   background: #2cbc85;
+}
+
+.page-header .cta-btn-danger:hover {
+  background: #f93b4e;
 }
 
 /*--------------------------------------------------------------

@@ -41,11 +41,9 @@
 											<label for="namasiswa" class="form-label">Album Gambar</label>
 											<select class="form-select" id="album" placeholder="Masukkan Album Gambar" name="album" required>
 												<option value="">- Pilih -</option>
-												<?php 
-												foreach ($album as $a) {
-													?>
-													<option value="<?= $a->id_album?>"><?= $a->nama_album?></option>								
-												<?php } ?>
+												<?php foreach ($album as $a): ?>
+													<option value="<?= $a->id_album ?>"><?= $a->nama_album ?></option>
+												<?php endforeach; ?>
 											</select>
 										</div>
 

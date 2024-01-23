@@ -45,7 +45,7 @@
     <script src="<?=base_url('assets/static/js/pages/date-picker.js')?>"></script>
 
     <!-- Log Out Otomatis -->
-    <script>
+    <!-- <script>
       // Fungsi untuk mengatur timer otomatis logout
       function startLogoutTimer() {
         let timeoutId;
@@ -68,7 +68,7 @@
 
       // Panggil fungsi untuk memulai timer otomatis logout
       startLogoutTimer();
-    </script>
+    </script> -->
     <!-- Log Out Otomatis -->
     
   </body>
