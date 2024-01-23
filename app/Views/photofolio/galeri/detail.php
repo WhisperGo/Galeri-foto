@@ -39,7 +39,7 @@
 
           <div class="col-lg-3">
             <div class="portfolio-info">
-              <h3>Informasi Gambar</h3>
+              <h3>Menu Gambar</h3>
               <ul>
                 <li><a href="#" class="btn-visit align-self-start"><i class="fa-solid fa-heart"></i>
                 </a></li>
