@@ -31,7 +31,7 @@
           </ul>
         </li>
         <!-- <li><a href="services.html">Services</a></li> -->
-        <!-- <li><a href="contact.html">Contact</a></li> -->
+        <li><a href="<?=base_url('galeri/tambah_gambar')?>">Add Posts</a></li>
         <?php if(session()->has('id')): ?>
             <li><a href="<?= base_url('login/log_out') ?>">Log Out</a></li>
         <?php else: ?>
