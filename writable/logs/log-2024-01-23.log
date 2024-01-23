@@ -132,3 +132,35 @@ CRITICAL - 2024-01-23 11:13:27 --> Call to a member function tampil() on null
 #3 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #4 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #5 {main}
+CRITICAL - 2024-01-23 11:28:54 --> syntax error, unexpected 'public' (T_PUBLIC)
+#0 C:\xampp\htdocs\Galeri-foto\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('galeri/tambah_g...')
+#1 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('galeri/tambah_g...')
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-23 11:29:25 --> syntax error, unexpected 'public' (T_PUBLIC)
+#0 C:\xampp\htdocs\Galeri-foto\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('galeri/tambah_g...')
+#1 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('galeri/tambah_g...')
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-23 11:29:27 --> syntax error, unexpected 'public' (T_PUBLIC)
+#0 C:\xampp\htdocs\Galeri-foto\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('galeri/tambah_g...')
+#1 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('galeri/tambah_g...')
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-23 11:29:36 --> syntax error, unexpected '}', expecting end of file
+#0 C:\xampp\htdocs\Galeri-foto\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('galeri/tambah_g...')
+#1 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('galeri/tambah_g...')
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

@@ -32,6 +32,7 @@
         </li>
         <!-- <li><a href="services.html">Services</a></li> -->
         <li><a href="<?=base_url('galeri/tambah_gambar')?>">Add Posts</a></li>
+        <li><a href="<?=base_url('galeri/gambarku')?>">My Posts</a></li>
         <?php if(session()->has('id')): ?>
             <li><a href="<?= base_url('login/log_out') ?>">Log Out</a></li>
         <?php else: ?>
@@ -45,7 +46,7 @@
       <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
       <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
       <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-      <!-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a> -->
+      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
     </div>
     <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
     <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>

@@ -20,7 +20,7 @@
 				<div class="row justify-content-center">
 					<div class="col-md-6 col-12">
 						<div class="card">
-							<form action="<?= base_url('aksi_create_dokumen')?>" method="post" class="row g-3" enctype="multipart/form-data">
+							<form action="<?= base_url('galeri/aksi_tambah_gambar')?>" method="post" class="row g-3" enctype="multipart/form-data">
 								<div class="card-header bg-primary">
 									<h4 class="card-title text-white d-flex justify-content-center align-items-center" style="margin-bottom: 0px;">Tambah Gambar Baru</h4>
 								</div>

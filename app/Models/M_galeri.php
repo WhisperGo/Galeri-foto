@@ -3,7 +3,7 @@
 namespace App\Models;
 use CodeIgniter\Model;
 
-class M_album extends Model
+class M_galeri extends Model
 {		
 	protected $table      = 'album';
 	protected $primaryKey = 'id_album';
