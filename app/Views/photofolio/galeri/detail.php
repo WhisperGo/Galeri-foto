@@ -40,22 +40,65 @@
         <div class="portfolio-info">
           <h3>Image Menu</h3>
           <ul>
+            <?php if (session()->has('id')): ?>
 
             <?php if ($isLiked): ?>
-              <li><a href="<?= base_url('galeri/aksi_like/' . $image->id_gambar) ?>" class="btn-visit-danger align-self-start"><i class="faj-button fa-solid fa-heart"></i>Unlike</a></li>
+              <li><a href="<?= base_url('galeri/aksi_like/' . $image->id_gambar) ?>" class="btn-visit-danger align-self-start"><i class="faj-button fa-solid fa-heart"></i>Unlike (<?= $likeCount ?>)</a></li>
             <?php else: ?>
-              <li><a href="<?= base_url('galeri/aksi_like/' . $image->id_gambar) ?>" class="btn-visit align-self-start"><i class="faj-button fa-solid fa-heart"></i>Like</a></li>
+              <li><a href="<?= base_url('galeri/aksi_like/' . $image->id_gambar) ?>" class="btn-visit align-self-start"><i class="faj-button fa-solid fa-heart"></i>Like (<?= $likeCount ?>)</a></li>
             <?php endif; ?>
 
-            <li><a href="#" class="btn-visit align-self-start"><i class="faj-button fa-solid fa-comment"></i>Comment</a></li>
-            <li><a href="<?= base_url('images/' . $image->nama_gambar) ?>" class="btn-visit align-self-start" download><i class="faj-button fa-solid fa-download"></i>Download</a></li>
-          </ul>
-        </div>
-      </div>
+          <?php else: ?>
+            <!-- Tambahkan atribut data-toggle dan data-target untuk membuka modal saat klik -->
+            <li><a href="#" class="btn-visit align-self-start" data-toggle="modal" data-target="#loginModal"><i class="faj-button fa-solid fa-heart"></i>Like (<?= $likeCount ?>)</a></li>
+          <?php endif; ?>
 
+          <li><a href="#" class="btn-visit align-self-start"><i class="faj-button fa-solid fa-comment"></i>Comment</a></li>
+          <li><a href="<?= base_url('images/' . $image->nama_gambar) ?>" class="btn-visit align-self-start" download><i class="faj-button fa-solid fa-download"></i>Download</a></li>
+        </ul>
+      </div>
     </div>
 
+    <!-- Modal untuk pesan "Harap Login Terlebih Dahulu" -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content bg-black"> <!-- Tambahkan kelas "bg-black" untuk warna hitam -->
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Harap Login Terlebih Dahulu</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Silakan login terlebih dahulu untuk memberi like.</p>
+          </div>
+          <div class="modal-footer">
+            <a href="<?= base_url('login') ?>" class="btn btn-primary">Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   </div>
+</div>
 </section><!-- End Gallery Single Section -->
 
-  </main><!-- End #main -->
+</main><!-- End #main -->
+
+<style>
+  .bg-black {
+    background-color: #000 !important; /* Gunakan "!important" untuk mengatasi pengaruh lainnya */
+  }
+
+  .modal-content {
+    color: #fff; /* Ganti warna teks menjadi putih atau warna yang sesuai */
+  }
+</style>
+
+<script>
+  $(document).ready(function () {
+        // Sembunyikan modal saat halaman dimuat
+    $('#loginModal').modal('hide');
+  });
+</script>

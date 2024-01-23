@@ -91,6 +91,19 @@ class M_album extends Model
 		return 'Album Tidak Ditemukan';
 	}
 
+	// Model M_album.php
+	public function isAlbumOwner($album_id, $user_id)
+	{
+		$album = $this->find($album_id);
+
+		if ($album && $album['user'] == $user_id) {
+			return true;
+		}
+
+		return false;
+	}
+
+
 
 	//CI4 Model
 	public function deletee($id)

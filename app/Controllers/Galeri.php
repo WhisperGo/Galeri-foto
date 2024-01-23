@@ -26,9 +26,13 @@ class Galeri extends BaseController
 
         $gambar_baru = $model->getGambarById($id);
         $isLiked = $model->isLiked($id, session()->get('id'));
+        $likeCount = $model->getLikeCount($id);
+        $isLoggedIn = session()->has('id');
 
         $data['gambar_baru'] = $gambar_baru;
         $data['isLiked'] = $isLiked;
+        $data['likeCount'] = $likeCount;
+
         $data['gambar'] = $model->tampil('gambar');
 
         echo view('photofolio/partial/header', $data);
@@ -37,6 +41,7 @@ class Galeri extends BaseController
         echo view('photofolio/partial/footer');
     }
 
+
     public function aksi_like($id)
     { 
         if(session()->get('level')==1) {
@@ -44,7 +49,7 @@ class Galeri extends BaseController
 
             $idUser = session()->get('id');
 
-        // Periksa apakah user sudah memberikan like atau belum
+            // Periksa apakah user sudah memberikan like atau belum
             if (!$model->isLiked($id, $idUser)) {
             // Jika belum, lakukan like
                 $data1 = array(

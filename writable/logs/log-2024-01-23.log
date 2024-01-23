@@ -848,3 +848,11 @@ CRITICAL - 2024-01-23 23:21:30 --> Call to a member function isLiked() on null
 ERROR - 2024-01-23 23:23:27 --> Table 'galeri_foto.likes' doesn't exist
 ERROR - 2024-01-23 23:23:34 --> Table 'galeri_foto.likes' doesn't exist
 ERROR - 2024-01-23 23:24:10 --> Unknown column 'id_gambar' in 'where clause'
+CRITICAL - 2024-01-23 23:55:02 --> Call to undefined method App\Models\M_galeri::getLikeCount
+#0 C:\xampp\htdocs\Galeri-foto\app\Controllers\Galeri.php(29): CodeIgniter\Model->__call('getLikeCount', Array)
+#1 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(832): App\Controllers\Galeri->detail_gambar('12')
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

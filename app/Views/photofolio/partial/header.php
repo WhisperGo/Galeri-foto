@@ -10,15 +10,15 @@
   <meta content="" name="keywords">
 
   <!-- Favicon -->
-    <?php 
-    $db = \Config\Database::connect();
-    $builder = $db->table('website');
-    $logo = $builder->select('favicon_website')
-    ->where('deleted_at', null)
-    ->get()
-    ->getRow();
+  <?php 
+  $db = \Config\Database::connect();
+  $builder = $db->table('website');
+  $logo = $builder->select('favicon_website')
+  ->where('deleted_at', null)
+  ->get()
+  ->getRow();
 
-    ?>
+  ?>
 
   <!-- Favicons -->
   <link rel="shortcut icon" href="<?=base_url('@mazer/logo/favicon/'. $logo->favicon_website)?>" type="image/x-icon"/>
@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="<?=base_url('@mazer/assets/extensions/@fortawesome/fontawesome-pro/css/all.min.css')?>">
 
   <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?=base_url('@mazer/assets/custom/custom_style.css')?>">
+  <link rel="stylesheet" href="<?=base_url('@mazer/assets/custom/custom_style.css')?>">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,6 +43,12 @@
 
   <!-- Template Main CSS File -->
   <link href="<?=base_url('@photofolio/assets/css/main.css')?>" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </head>
 <body>

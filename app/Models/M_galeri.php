@@ -70,6 +70,14 @@ class M_galeri extends Model
 		->delete();
 	}
 
+	public function getLikeCount($gambarId)
+	{
+		return $this->db->table('like')
+		->where('gambar', $gambarId)
+		->countAllResults();
+	}
+
+
 	//CI4 Model
 	public function deletee($id)
 	{
