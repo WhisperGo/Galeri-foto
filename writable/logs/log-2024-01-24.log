@@ -1,0 +1,188 @@
+CRITICAL - 2024-01-24 00:44:45 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\Galeri-foto\app\Views\photofolio\galeri\komentar.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 24, Array)
+#1 C:\xampp\htdocs\Galeri-foto\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Galeri-foto\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Galeri-foto\system\Common.php(1089): CodeIgniter\View\View->render('photofolio/gale...', Array, true)
+#4 C:\xampp\htdocs\Galeri-foto\app\Controllers\Galeri.php(89): view('photofolio/gale...', Array)
+#5 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(832): App\Controllers\Galeri->komentar('12')
+#6 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+#7 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-24 00:51:19 --> syntax error, unexpected 'else' (T_ELSE), expecting end of file
+#0 C:\xampp\htdocs\Galeri-foto\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\Galeri-foto\system\Common.php(1089): CodeIgniter\View\View->render('photofolio/gale...', Array, true)
+#2 C:\xampp\htdocs\Galeri-foto\app\Controllers\Galeri.php(89): view('photofolio/gale...', Array)
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(832): App\Controllers\Galeri->komentar('12')
+#4 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+#5 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-24 00:55:51 --> syntax error, unexpected 'else' (T_ELSE), expecting end of file
+#0 C:\xampp\htdocs\Galeri-foto\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\Galeri-foto\system\Common.php(1089): CodeIgniter\View\View->render('photofolio/gale...', Array, true)
+#2 C:\xampp\htdocs\Galeri-foto\app\Controllers\Galeri.php(88): view('photofolio/gale...', Array)
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(832): App\Controllers\Galeri->komentar('12')
+#4 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+#5 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-24 01:15:24 --> syntax error, unexpected end of file
+#0 C:\xampp\htdocs\Galeri-foto\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\Galeri-foto\system\Common.php(1089): CodeIgniter\View\View->render('photofolio/gale...', Array, true)
+#2 C:\xampp\htdocs\Galeri-foto\app\Controllers\Galeri.php(88): view('photofolio/gale...', Array)
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(832): App\Controllers\Galeri->komentar('12')
+#4 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+#5 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-24 01:19:33 --> syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xampp\htdocs\Galeri-foto\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('galeri/komentar...')
+#1 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('galeri/komentar...')
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-24 01:20:24 --> Too few arguments to function App\Controllers\Galeri::aksi_tambah_komentar(), 0 passed in C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(832): App\Controllers\Galeri->aksi_tambah_komentar()
+#1 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-24 01:21:00 --> Too few arguments to function App\Controllers\Galeri::aksi_tambah_komentar(), 0 passed in C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(832): App\Controllers\Galeri->aksi_tambah_komentar()
+#1 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-24 01:29:35 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+#0 C:\xampp\htdocs\Galeri-foto\app\Controllers\Galeri.php(79): App\Models\M_galeri->getKomentarWithUsername('12')
+#1 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(832): App\Controllers\Galeri->komentar('12')
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-24 01:30:13 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+#0 C:\xampp\htdocs\Galeri-foto\app\Controllers\Galeri.php(79): App\Models\M_galeri->getKomentarWithUsername('12')
+#1 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(832): App\Controllers\Galeri->komentar('12')
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-01-24 01:32:07 --> Unknown column 'user.id' in 'on clause'
+CRITICAL - 2024-01-24 01:32:07 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\Galeri-foto\app\Models\M_galeri.php(89): App\Models\M_galeri->join2('komentar', 'user', 'user.id = komen...')
+#1 C:\xampp\htdocs\Galeri-foto\app\Controllers\Galeri.php(77): App\Models\M_galeri->getKomentarWithUsername('12')
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(832): App\Controllers\Galeri->komentar('12')
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+#4 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2024-01-24 01:32:08 --> Unknown column 'user.id' in 'on clause'
+CRITICAL - 2024-01-24 01:32:08 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\Galeri-foto\app\Models\M_galeri.php(89): App\Models\M_galeri->join2('komentar', 'user', 'user.id = komen...')
+#1 C:\xampp\htdocs\Galeri-foto\app\Controllers\Galeri.php(77): App\Models\M_galeri->getKomentarWithUsername('12')
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(832): App\Controllers\Galeri->komentar('12')
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+#4 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2024-01-24 01:32:08 --> Unknown column 'user.id' in 'on clause'
+CRITICAL - 2024-01-24 01:32:08 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\Galeri-foto\app\Models\M_galeri.php(89): App\Models\M_galeri->join2('komentar', 'user', 'user.id = komen...')
+#1 C:\xampp\htdocs\Galeri-foto\app\Controllers\Galeri.php(77): App\Models\M_galeri->getKomentarWithUsername('12')
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(832): App\Controllers\Galeri->komentar('12')
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+#4 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2024-01-24 01:32:09 --> Unknown column 'user.id' in 'on clause'
+CRITICAL - 2024-01-24 01:32:09 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\Galeri-foto\app\Models\M_galeri.php(89): App\Models\M_galeri->join2('komentar', 'user', 'user.id = komen...')
+#1 C:\xampp\htdocs\Galeri-foto\app\Controllers\Galeri.php(77): App\Models\M_galeri->getKomentarWithUsername('12')
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(832): App\Controllers\Galeri->komentar('12')
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+#4 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2024-01-24 01:32:09 --> Unknown column 'user.id' in 'on clause'
+CRITICAL - 2024-01-24 01:32:09 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\Galeri-foto\app\Models\M_galeri.php(89): App\Models\M_galeri->join2('komentar', 'user', 'user.id = komen...')
+#1 C:\xampp\htdocs\Galeri-foto\app\Controllers\Galeri.php(77): App\Models\M_galeri->getKomentarWithUsername('12')
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(832): App\Controllers\Galeri->komentar('12')
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+#4 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2024-01-24 01:32:09 --> Unknown column 'user.id' in 'on clause'
+CRITICAL - 2024-01-24 01:32:09 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\Galeri-foto\app\Models\M_galeri.php(89): App\Models\M_galeri->join2('komentar', 'user', 'user.id = komen...')
+#1 C:\xampp\htdocs\Galeri-foto\app\Controllers\Galeri.php(77): App\Models\M_galeri->getKomentarWithUsername('12')
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(832): App\Controllers\Galeri->komentar('12')
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+#4 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2024-01-24 01:32:09 --> Unknown column 'user.id' in 'on clause'
+CRITICAL - 2024-01-24 01:32:09 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\Galeri-foto\app\Models\M_galeri.php(89): App\Models\M_galeri->join2('komentar', 'user', 'user.id = komen...')
+#1 C:\xampp\htdocs\Galeri-foto\app\Controllers\Galeri.php(77): App\Models\M_galeri->getKomentarWithUsername('12')
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(832): App\Controllers\Galeri->komentar('12')
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+#4 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2024-01-24 01:32:09 --> Unknown column 'user.id' in 'on clause'
+CRITICAL - 2024-01-24 01:32:09 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\Galeri-foto\app\Models\M_galeri.php(89): App\Models\M_galeri->join2('komentar', 'user', 'user.id = komen...')
+#1 C:\xampp\htdocs\Galeri-foto\app\Controllers\Galeri.php(77): App\Models\M_galeri->getKomentarWithUsername('12')
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(832): App\Controllers\Galeri->komentar('12')
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+#4 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2024-01-24 01:32:10 --> Unknown column 'user.id' in 'on clause'
+CRITICAL - 2024-01-24 01:32:10 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\Galeri-foto\app\Models\M_galeri.php(89): App\Models\M_galeri->join2('komentar', 'user', 'user.id = komen...')
+#1 C:\xampp\htdocs\Galeri-foto\app\Controllers\Galeri.php(77): App\Models\M_galeri->getKomentarWithUsername('12')
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(832): App\Controllers\Galeri->komentar('12')
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+#4 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2024-01-24 01:32:10 --> Unknown column 'user.id' in 'on clause'
+CRITICAL - 2024-01-24 01:32:10 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\Galeri-foto\app\Models\M_galeri.php(89): App\Models\M_galeri->join2('komentar', 'user', 'user.id = komen...')
+#1 C:\xampp\htdocs\Galeri-foto\app\Controllers\Galeri.php(77): App\Models\M_galeri->getKomentarWithUsername('12')
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(832): App\Controllers\Galeri->komentar('12')
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Galeri))
+#4 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2024-01-24 01:38:58 --> syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xampp\htdocs\Galeri-foto\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('galeri/komentar...')
+#1 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('galeri/komentar...')
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

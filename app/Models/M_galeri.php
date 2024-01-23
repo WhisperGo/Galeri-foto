@@ -43,7 +43,6 @@ class M_galeri extends Model
 	{
 		return $this->db->table($table1)
 		->join($table2, $on, 'left')
-		->where('website.deleted_at', null)
 		->get()
 		->getResult();
 	}
@@ -76,6 +75,16 @@ class M_galeri extends Model
 		->where('gambar', $gambarId)
 		->countAllResults();
 	}
+
+	public function getKomentarByGambarId($gambar_id)
+    {
+        return $this->db->table('komentar')
+            ->select('komentar.*, user.username')
+            ->join('user', 'user.id_user = komentar.user')
+            ->where('komentar.gambar', $gambar_id)
+            ->get()
+            ->getResult();
+    }
 
 
 	//CI4 Model

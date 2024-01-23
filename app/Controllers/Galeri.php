@@ -68,5 +68,46 @@ class Galeri extends BaseController
         }
     }
 
+    public function komentar($id)
+    {
 
+        $model = new M_galeri();
+        $data['title'] = 'GT Gallery - Komentar';
+
+        // Ambil data gambar berdasarkan ID
+        $gambar_baru = $model->getGambarById($id);
+
+        // Ambil komentar berdasarkan ID gambar
+        $komentar = $model->getKomentarByGambarId($id);
+
+        $data['gambar_baru'] = $gambar_baru;
+        $data['komentar'] = $komentar;
+
+        echo view('photofolio/partial/header', $data);
+        echo view('photofolio/partial/top_menu');
+        echo view('photofolio/galeri/komentar', $data);
+        echo view('photofolio/partial/footer');
+
+    }
+
+    public function aksi_tambah_komentar($gambar_id)
+    {
+        if(session()->get('level') == 1) {
+            $model = new M_galeri();
+
+            $a = $this->request->getPost('isi_komentar');
+
+            $data1 = [
+                'gambar' => $gambar_id,
+                'user' => session()->get('id'),
+                'isi_komentar' => $a,
+            ];
+
+            $model->simpan('komentar', $data1);
+
+            return redirect()->to('galeri/komentar/' . $gambar_id);
+        } else {
+            return redirect()->to('login');
+        }
+    }
 }

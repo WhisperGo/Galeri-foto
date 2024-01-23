@@ -1174,9 +1174,9 @@ h6 {
   border-radius: 4px;
   box-shadow: none;
   font-size: 14px;
-  background-color: var(--color-secondary);
+/*  background-color: var(--color-secondary);*/
   border: 1px solid #2e3133;
-  color: #fff;
+  color: #000;
 }
 
 .contact .php-email-form input {

@@ -53,7 +53,8 @@
             <li><a href="#" class="btn-visit align-self-start" data-toggle="modal" data-target="#loginModal"><i class="faj-button fa-solid fa-heart"></i>Like (<?= $likeCount ?>)</a></li>
           <?php endif; ?>
 
-          <li><a href="#" class="btn-visit align-self-start"><i class="faj-button fa-solid fa-comment"></i>Comment</a></li>
+          <li><a href="<?=base_url('galeri/komentar/' . $image->id_gambar)?>" class="btn-visit align-self-start"><i class="faj-button fa-solid fa-comment"></i>Comment</a></li>
+
           <li><a href="<?= base_url('images/' . $image->nama_gambar) ?>" class="btn-visit align-self-start" download><i class="faj-button fa-solid fa-download"></i>Download</a></li>
         </ul>
       </div>

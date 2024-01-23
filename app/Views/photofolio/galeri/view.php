@@ -25,7 +25,7 @@
               <img src="<?= base_url('images/' . $image->nama_gambar) ?>" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="<?= base_url('images/' . $image->nama_gambar) ?>" title="<?= $image->judul_gambar ?>" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="<?=base_url('galeri/detail_gambar/' . $image->id_gambar)?>" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="<?=base_url('galeri/detail_gambar/' . $image->id_gambar)?>" class="details-link"><i class="fa-solid fa-circle-info"></i></a>
               </div>
             </div>
           </div><!-- End Gallery Item -->
