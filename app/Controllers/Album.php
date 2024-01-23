@@ -6,13 +6,15 @@ use App\Models\M_album;
 class Album extends BaseController
 {
 
+    // ===================================== ALBUM ============================================
+
     public function index()
     {
         if (session()->get('level')==1) {
 
             $model=new M_album();
 
-            $data['title']='Galeri Foto - Album';
+            $data['title'] = 'GT Gallery - Album';
             $data['gambar']=$model->tampil('gambar');
             $data['album']=$model->tampil('album');
 
@@ -32,14 +34,14 @@ class Album extends BaseController
 
             $model = new M_album();
 
-        // Ambil nama_album dan deskripsi_album berdasarkan ID album
+            // Ambil nama_album dan deskripsi_album berdasarkan ID album
             $nama_album = $model->getNamaAlbumById($id);
             $deskripsi_album = $model->getDeskripsiAlbumById($id);
 
-        // Ambil data gambar berdasarkan ID album
+            // Ambil data gambar berdasarkan ID album
             $gambar_album = $model->getGambarByAlbumId($id);
 
-            $data['title'] = 'Galeri Foto - Detail Gambar';
+            $data['title'] = 'GT Gallery - Detail Gambar';
             $data['album'] = $model->tampil('album');
             $data['nama_album'] = $nama_album;
             $data['deskripsi_album'] = $deskripsi_album;
@@ -54,14 +56,13 @@ class Album extends BaseController
         }
     }
 
-
     public function tambah_album()
     {
         if (session()->get('level')==1) {
 
             $model=new M_album();
 
-            $data['title']='Galeri Foto - Tambah Album';
+            $data['title'] = 'GT Gallery - Tambah Album';
             $data['album']=$model->tampil('album');
 
             echo view('mazer/partial/header', $data);
@@ -74,33 +75,42 @@ class Album extends BaseController
     } 
 
     public function aksi_tambah_album()
-    { 
-        if(session()->get('level')==1) {
+    {
+        if (session()->get('level') == 1) {
 
-            $a= $this->request->getPost('nama_album');
-            $b= $this->request->getPost('deskripsi_album');
+            $a = $this->request->getPost('nama_album');
+            $b = $this->request->getPost('deskripsi_album');
             date_default_timezone_set('Asia/Jakarta');
 
-            $gambar_album= $this->request->getFile('gambar_album');
-            if($gambar_album && $gambar_album->isValid() && ! $gambar_album->hasMoved())
-            {
-                $imageName1 = $gambar_album->getName();
-                $gambar_album->move('cover',$imageName1);
-            }else{
-                $imageName1='cover.jpg';
-            }
+            $gambar_album = $this->request->getFile('gambar_album');
 
-            //Yang ditambah ke user
-            $data1=array(
-                'gambar_album'=>$imageName1,
-                'nama_album'=>$a,
-                'deskripsi_album'=>$b,
-                'user'=>session()->get('id')
-            );
-            $model=new M_album();
-            $model->simpan('album', $data1);
-            return redirect()->to('album');
-        }else {
+            if ($gambar_album->isValid() && !$gambar_album->hasMoved()) {
+            // Mendapatkan ekstensi file
+                $ext = $gambar_album->getClientExtension();
+
+            // Membuat nama file unik dengan ID pengguna dan timestamp
+                $imageName = 'cover_' . session()->get('id') . '_' . time() . '.' . $ext;
+
+            // Pindahkan file ke folder cover
+                $gambar_album->move('cover', $imageName);
+
+            // Yang ditambah ke database
+                $data1 = [
+                    'gambar_album' => $imageName,
+                    'nama_album' => $a,
+                    'deskripsi_album' => $b,
+                    'user' => session()->get('id')
+                ];
+
+                $model = new M_album();
+                $model->simpan('album', $data1);
+
+                return redirect()->to('album');
+            } else {
+                // Handle jika upload gagal
+                return redirect()->back()->with('error', 'Gagal mengupload gambar.');
+            }
+        } else {
             return redirect()->to('login');
         }
     }
@@ -118,13 +128,15 @@ class Album extends BaseController
         }
     }
 
+    // ===================================== GAMBAR ============================================
+
     public function tambah_gambar()
     {
         if (session()->get('level')==1) {
 
             $model = new M_album();
 
-            $data['title'] = 'Galeri Foto - Tambah Gambar';
+            $data['title'] = 'GT Gallery - Tambah Gambar';
             $data['album'] = $model->tampilAlbumUser();
 
             echo view('mazer/partial/header', $data);
@@ -137,51 +149,46 @@ class Album extends BaseController
     }
 
     public function aksi_tambah_gambar()
-    { 
-        if(session()->get('level')==1) {
+    {
+        if(session()->get('level') == 1) {
 
-            $a= $this->request->getPost('album');
+            $a = $this->request->getPost('judul_gambar');
+            $b = $this->request->getPost('deskripsi_gambar');
+            $c = $this->request->getPost('album');
             date_default_timezone_set('Asia/Jakarta');
 
-            $gambar_baru= $this->request->getFile('gambar_baru');
-            if($gambar_baru && $gambar_baru->isValid() && ! $gambar_baru->hasMoved())
-            {
-                $imageName1 = $gambar_baru->getName();
-                $gambar_baru->move('images',$imageName1);
+            $gambar_baru = $this->request->getFile('gambar_baru');
+
+            if ($gambar_baru && $gambar_baru->isValid() && !$gambar_baru->hasMoved()) {
+            // Mendapatkan ekstensi file
+                $ext = $gambar_baru->getClientExtension();
+
+            // Membuat nama file unik dengan ID pengguna dan timestamp
+                $imageName = 'gambar_' . session()->get('id') . '_' . time() . '.' . $ext;
+
+            // Pindahkan file ke folder images
+                $gambar_baru->move('images', $imageName);
+
+            // Yang ditambah ke database
+                $data1 = [
+                    'judul_gambar' => $a,
+                    'nama_gambar' => $imageName,
+                    'deskripsi_gambar' => $b,
+                    'album_gambar' => $c,
+                    'user' => session()->get('id')
+                ];
+
+                $model = new M_album();
+                $model->simpan('gambar', $data1);
+
+                return redirect()->to('album/detail_album/' . $c);
+            } else {
+                // Handle jika upload gagal
+                return redirect()->back()->with('error', 'Gagal mengupload gambar.');
             }
-
-            // $logo_pdf= $this->request->getFile('logo_pdf');
-            // if($logo_pdf && $logo_pdf->isValid() && ! $logo_pdf->hasMoved())
-            // {
-            //     $imageName2 = $logo_pdf->getName();
-            //     $logo_pdf->move('logo/logo_pdf',$imageName2);
-            // }else{
-            //     $imageName2='logo_pdf_contoh.svg';
-            // }
-
-            // $favicon= $this->request->getFile('favicon');
-            // if($favicon && $favicon->isValid() && ! $favicon->hasMoved())
-            // {
-            //     $imageName3 = $favicon->getName();
-            //     $favicon->move('logo/favicon',$imageName3);
-            // }else{
-            //     $imageName3='favicon_contoh.svg';
-            // }
-
-        //Yang ditambah ke user
-            $data1=array(
-                'nama_gambar'=>$imageName1,
-                'album_gambar'=>$a,
-                'user'=>session()->get('id')
-            );
-            $model=new M_album();
-            $model->simpan('gambar', $data1);
-            return redirect()->to('album');
-        }else {
+        } else {
             return redirect()->to('login');
         }
     }
-
-    
 
 }

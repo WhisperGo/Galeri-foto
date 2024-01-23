@@ -15,6 +15,10 @@ class M_galeri extends Model
 	{
 		return $this->db->table($table1)->where('deleted_at', null)->get()->getResult();
 	}
+	public function tampilGaleri($table1)	
+	{
+		return $this->db->table($table1)->where('deleted_at', null)->orderBy('created_at', 'DESC')->get()->getResult();
+	}
 	public function hapus($table, $where)
 	{
 		return $this->db->table($table)->delete($where);
@@ -42,6 +46,28 @@ class M_galeri extends Model
 		->where('website.deleted_at', null)
 		->get()
 		->getResult();
+	}
+	public function getGambarById($id)
+	{
+        // Ambil data gambar berdasarkan id_album
+		return $this->db->table('gambar')
+		->where('id_gambar', $id)
+		->get()
+		->getResult();
+	}
+
+	public function isLiked($idGambar, $idUser)
+	{
+		return $this->db->table('like')
+		->where(['gambar' => $idGambar, 'user' => $idUser])
+		->countAllResults() > 0;
+	}
+
+	public function hapusLike($idGambar, $idUser)
+	{
+		return $this->db->table('like')
+		->where(['gambar' => $idGambar, 'user' => $idUser])
+		->delete();
 	}
 
 	//CI4 Model

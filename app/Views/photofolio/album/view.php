@@ -6,7 +6,7 @@
       <div class="row d-flex justify-content-center">
         <div class="col-lg-6 text-center">
           <h2>My Album</h2>
-          <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+          <p>Di sini terletak album pribadi anda, dimana anda dapat mengupload gambar ke album yang telah dibuat, dan gambar akan tershare otomatis di galeri kami.</p>
 
           <a href="<?= base_url('album/tambah_album') ?>" class="cta-btn">Add Album</a>
 

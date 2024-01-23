@@ -28,22 +28,19 @@ $uri = service('uri');
   <section id="gallery" class="gallery">
     <div class="container-fluid">
       <div class="row gy-4 justify-content-center">
-        <?php foreach ($album as $image): ?>
+        <?php foreach ($gambar_album as $gambar): ?>
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="<?= base_url('cover/' . $image->gambar_album) ?>" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;" alt="">
+              <img src="<?= base_url('images/' . $gambar->nama_gambar) ?>" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="<?=base_url('album/detail_album/' . $image->id_album)?>" class="details-link"><i class="fa-solid fa-album-collection"></i></a>
-                <span><?=$image->nama_album?></span>
+                <a href="<?= base_url('galeri/detail_gambar/' . $gambar->id_gambar) ?>" class="details-link"><i class="fa-solid fa-circle-info"></i></a>
+                <span><?=$gambar->judul_gambar?></span>
               </div>
             </div>
           </div><!-- End Gallery Item -->
         <?php endforeach; ?>
       </div>
     </div>
-  </section>
-  <!-- End Gallery Section -->
-
-
+  </section><!-- End Gallery Section -->
 
   </main><!-- End #main -->

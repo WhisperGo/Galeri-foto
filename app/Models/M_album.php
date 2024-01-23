@@ -22,18 +22,18 @@ class M_album extends Model
 		return $this->db->table($this->table)
 		->where('user', $idUser)
 		->where('deleted_at', null)
-		->orderBy('created_at', 'DESC')
+		->orderBy('nama_album', 'ASC')
 		->get()
 		->getResult();
 	}
-	 public function getGambarByAlbumId($id)
-    {
+	public function getGambarByAlbumId($id)
+	{
         // Ambil data gambar berdasarkan id_album
-        return $this->db->table('gambar')
-            ->where('album_gambar', $id)
-            ->get()
-            ->getResult();
-    }
+		return $this->db->table('gambar')
+		->where('album_gambar', $id)
+		->get()
+		->getResult();
+	}
 	public function hapus($table, $where)
 	{
 		return $this->db->table($table)->delete($where);

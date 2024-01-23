@@ -2,23 +2,23 @@
 <footer id="footer" class="footer">
   <div class="container">
     <div class="copyright">
-      &copy; Copyright <strong><span>GaleriFoto</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>GT Gallery</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
       <!-- You can delete the links only if you purchased the pro version. -->
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/ -->
-      Designed by <a href="">Kevin Fernando</a>
+      Designed by <a href="javascript:void(0);">Kevin Fernando</a>
     </div>
   </div>
 </footer><!-- End Footer -->
 
 <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-<!-- <div id="preloader">
+<div id="preloader">
   <div class="line"></div>
-</div> -->
+</div>
 
 <!-- Vendor JS Files -->
 <script src="<?=base_url('@photofolio/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
@@ -31,7 +31,7 @@
 <script src="<?=base_url('@photofolio/assets/js/main.js')?>"></script>
 
 <!-- Log Out Otomatis -->
-    <script>
+<!--     <script>
       // Fungsi untuk mengatur timer otomatis logout
       function startLogoutTimer() {
         let timeoutId;
@@ -54,7 +54,7 @@
 
       // Panggil fungsi untuk memulai timer otomatis logout
       startLogoutTimer();
-    </script>
+    </script> -->
     <!-- Log Out Otomatis -->
 
 </body>

@@ -6,7 +6,7 @@ class Dashboard extends BaseController
 {
     public function index()
     {
-        $data['title']='Galeri Foto - Dashboard';
+        $data['title'] = 'GT Gallery - Dashboard';
 
         echo view('photofolio/partial/header', $data);
         echo view('photofolio/partial/top_menu');

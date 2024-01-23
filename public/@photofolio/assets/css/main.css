@@ -880,16 +880,38 @@ h6 {
 }
 
 .gallery-single .portfolio-info .btn-visit {
-  padding: 8px 40px;
+  width: 100%; /* Sesuaikan lebar sesuai kebutuhan */
+  padding: 8px 0; /* Sesuaikan padding sesuai kebutuhan */
   background: var(--color-primary);
   color: #fff;
   border-radius: 50px;
   transition: 0.3s;
+  display: block; /* Membuat tombol menjadi elemen blok untuk menempati lebar penuh */
+  text-align: center; /* Menengahkan teks di dalam tombol */
+  margin-bottom: 10px; /* Jarak antara tombol-tombol */
 }
 
 .gallery-single .portfolio-info .btn-visit:hover {
   background: #2cbc85;
 }
+
+.gallery-single .portfolio-info .btn-visit-danger {
+  width: 100%; /* Sesuaikan lebar sesuai kebutuhan */
+  padding: 8px 0; /* Sesuaikan padding sesuai kebutuhan */
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 50px;
+  transition: 0.3s;
+  display: block; /* Membuat tombol menjadi elemen blok untuk menempati lebar penuh */
+  text-align: center; /* Menengahkan teks di dalam tombol */
+  margin-bottom: 10px; /* Jarak antara tombol-tombol */
+  background: #dc3545;
+}
+
+.gallery-single .portfolio-info .btn-visit-danger:hover {
+  background: #f93b4e;
+}
+
 
 .gallery-single .portfolio-description h2 {
   font-size: 26px;

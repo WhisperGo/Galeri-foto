@@ -18,7 +18,7 @@
 				<div class="row justify-content-center">
 					<div class="col-md-6 col-12">
 						<div class="card">
-							<form action="<?= base_url('galeri/aksi_tambah_gambar')?>" method="post" class="row g-3" enctype="multipart/form-data">
+							<form action="<?= base_url('album/aksi_tambah_gambar')?>" method="post" class="row g-3" enctype="multipart/form-data">
 								<div class="card-header bg-primary">
 									<h4 class="card-title text-white d-flex justify-content-center align-items-center" style="margin-bottom: 0px;">Tambah Gambar Baru</h4>
 								</div>
@@ -35,6 +35,16 @@
 												</div>
 											</div>
 											<div id="preview"></div>
+										</div>
+
+										<div class="mb-3">
+											<label for="namaalbum" class="form-label">Judul Gambar</label>
+											<input type="text" class="form-control" id="judul_gambar" placeholder="Masukkan Judul Gambar" name="judul_gambar" required>
+										</div>
+
+										<div class="mb-3">
+											<label for="namasiswa" class="form-label">Deskripsi Gambar</label>
+											<textarea class="form-control" id="deskripsi_gambar" rows="3" name="deskripsi_gambar" placeholder="Masukkan Deskripsi Gambar (Opsional)" style="height: 75px;"></textarea>
 										</div>
 
 										<div class="mb-3">

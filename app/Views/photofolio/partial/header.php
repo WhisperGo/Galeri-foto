@@ -21,12 +21,13 @@
     ?>
 
   <!-- Favicons -->
-  <!-- <link href="<?=base_url('@photofolio/assets/img/favicon.png')?>" rel="icon">
-  <link href="<?=base_url('@photofolio/assets/img/apple-touch-icon.png')?>" rel="apple-touch-icon"> -->
   <link rel="shortcut icon" href="<?=base_url('@mazer/logo/favicon/'. $logo->favicon_website)?>" type="image/x-icon"/>
 
   <!-- FontAwesome -->
   <link rel="stylesheet" href="<?=base_url('@mazer/assets/extensions/@fortawesome/fontawesome-pro/css/all.min.css')?>">
+
+  <!-- Custom CSS -->
+    <link rel="stylesheet" href="<?=base_url('@mazer/assets/custom/custom_style.css')?>">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

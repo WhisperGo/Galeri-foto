@@ -9,7 +9,7 @@
 
 				<h1 class="auth-title">Log in.</h1>
 				<p class="auth-subtitle mb-5">
-					Masuk dengan kredensial yang telah terdaftar sebelumnya.
+					Masuk untuk mendapatkan akses upload foto ke album pribadi.
 				</p>
 
 				<?php if (session()->has('error')): ?>
