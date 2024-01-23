@@ -4,6 +4,10 @@ function setLightTheme() {
   setTheme("light", true);
 }
 
+// function setDarkTheme() {
+//   setTheme("dark", true);
+// }
+
 /**
  * Set theme for mazer
  * @param {"dark"|"light"} theme
@@ -33,11 +37,17 @@ function initTheme() {
     });
   }
 
-  // Only set the theme to light if there is no stored theme
+  Only set the theme to light if there is no stored theme
   if (!theme) {
     setLightTheme();
   }
 }
+
+//   // Only set the theme to light if there is no stored theme
+//   if (!theme) {
+//     setDarkTheme();
+//   }
+// }
 
 window.addEventListener('DOMContentLoaded', initTheme);
 

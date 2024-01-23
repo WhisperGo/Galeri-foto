@@ -2,7 +2,7 @@
 	<div class="page-heading">
 		<div class="page-title">
 			<div class="row justify-content-center">
-				<img src="<?=base_url('@mazer/prixier/img/logo_contoh_tengah.svg')?>" alt="logo" style="max-width: 10%; height: auto; margin-top: 50px; margin-bottom: 15px;">
+				<img src="<?=base_url('@mazer/prixier/img/logo_contoh_tengah.svg')?>" alt="logo" style="max-width: 10%; height: auto; margin-top: 50px; margin-bottom: 25px;">
 			</div>
 			<div class="col-12 col-md-6 order-md-2 order-first">
 				<nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
@@ -18,19 +18,19 @@
 				<div class="row justify-content-center">
 					<div class="col-md-6 col-12">
 						<div class="card">
-							<form action="<?= base_url('galeri/aksi_tambah_gambar')?>" method="post" class="row g-3" enctype="multipart/form-data">
+							<form action="<?= base_url('album/aksi_tambah_album')?>" method="post" class="row g-3" enctype="multipart/form-data">
 								<div class="card-header bg-primary">
-									<h4 class="card-title text-white d-flex justify-content-center align-items-center" style="margin-bottom: 0px;">Tambah Gambar Baru</h4>
+									<h4 class="card-title text-white d-flex justify-content-center align-items-center" style="margin-bottom: 0px;">Tambah Album Baru</h4>
 								</div>
 								<div class="card-body">
 									<div class="row">
 
 										<div class="">
-											<label for="logo_perusahaan" class="form-label">Gambar Baru</label>
+											<label for="logo_perusahaan" class="form-label">Gambar Album (Opsional)</label>
 											<div class="mb-3">
 												<div class="custom-file">
 													<div class="col-12 col-md-12">
-														<input type="file" class="logo-perusahaan" id="gambar_baru" name="gambar_baru" accept="image/*" onchange="previewImage()" required>
+														<input type="file" class="logo-perusahaan" id="gambar_album" name="gambar_album" accept="image/*" required>
 													</div>
 												</div>
 											</div>

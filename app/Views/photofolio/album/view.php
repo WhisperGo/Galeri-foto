@@ -5,10 +5,10 @@
     <div class="container position-relative">
       <div class="row d-flex justify-content-center">
         <div class="col-lg-6 text-center">
-          <h2>Gallery</h2>
+          <h2>My Album</h2>
           <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
 
-          <!-- <a href="javascript:void(0);" class="cta-btn">My Other Gallery</a> -->
+          <a href="<?= base_url('album/tambah_album') ?>" class="cta-btn">Add Album</a>
 
         </div>
       </div>
@@ -19,25 +19,23 @@
   <section id="gallery" class="gallery">
     <div class="container-fluid">
       <div class="row gy-4 justify-content-center">
-        <?php foreach ($gambar as $image): ?>
+        <?php foreach ($album as $image): ?>
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="gallery-item h-100">
-              <img src="<?= base_url('images/' . $image->nama_gambar) ?>" class="img-fluid" alt="">
+              <img src="<?= base_url('cover/' . $image->gambar_album) ?>" class="img-fluid" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="<?= base_url('images/' . $image->nama_gambar) ?>" title="<?= $image->judul_gambar ?>" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="<?=base_url('galeri/detail_gambar/' . $image->id_gambar)?>" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="<?=base_url('album/detail_album/' . $image->id_gambar)?>" class="details-link"><i class="fa-solid fa-album-collection"></i>
+
+                <span><?=$image->nama_album?></span>
+                </a>
+
               </div>
             </div>
           </div><!-- End Gallery Item -->
         <?php endforeach; ?>
       </div>
     </div>
-  </section><!-- End Gallery Section -->
-
-
-</div>
-
-</div>
-</section><!-- End Gallery Section -->
+  </section>
+  <!-- End Gallery Section -->
 
   </main><!-- End #main -->

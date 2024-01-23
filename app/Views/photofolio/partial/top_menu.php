@@ -4,7 +4,7 @@
 
     <a href="<?=base_url('/')?>" class="logo d-flex align-items-center  me-auto me-lg-0">
       <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="<?=base_url('@photofolio/assets/img/logo.png')?>" alt=""> -->
+      <!-- <img src="<?=base_url('@mazer/assets/logo/logo_website/logo_contoh.svg')?>" alt=""> -->
       <i class="bi bi-camera"></i>
       <h1>Galeri Foto</h1>
     </a>
@@ -13,12 +13,13 @@
       <ul>
         <li><a href="<?=base_url('/')?>" class="active">Home</a></li>
         <!-- <li><a href="about.html">About</a></li> -->
-        <li class="dropdown"><a href="javascript:void(0);"><span>Gallery</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+        <li><a href="<?=base_url('galeri')?>">Gallery</a></li>
+        <!-- <li class="dropdown"><a href="javascript:void(0);"><span>Gallery</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
           <ul>
             <li><a href="<?=base_url('galeri')?>">Alam</a></li>
             <li><a href="<?=base_url('galeri')?>">Arsitektur</a></li>
             <li><a href="<?=base_url('galeri')?>">Model</a></li>
-            <!-- <li><a href="gallery.html">Architecture</a></li>
+            <li><a href="gallery.html">Architecture</a></li>
             <li><a href="gallery.html">Sports</a></li>
             <li><a href="gallery.html">Travel</a></li>
             <li class="dropdown"><a href="#"><span>Sub Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -27,13 +28,14 @@
                 <li><a href="#">Sub Menu 2</a></li>
                 <li><a href="#">Sub Menu 3</a></li>
               </ul>
-            </li> -->
+            </li>
           </ul>
-        </li>
+        </li> -->
         <!-- <li><a href="services.html">Services</a></li> -->
-        <li><a href="<?=base_url('galeri/tambah_gambar')?>">Add Posts</a></li>
-        <li><a href="<?=base_url('galeri/gambarku')?>">My Posts</a></li>
+        <!-- <li><a href="<?=base_url('galeri/tambah_gambar')?>">Add Posts</a></li> -->
+        
         <?php if(session()->has('id')): ?>
+            <li><a href="<?=base_url('album')?>">My Album</a></li>
             <li><a href="<?= base_url('login/log_out') ?>">Log Out</a></li>
         <?php else: ?>
             <li><a href="<?= base_url('login') ?>">Login</a></li>
