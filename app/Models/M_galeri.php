@@ -56,14 +56,13 @@ class M_galeri extends Model
 	}
 
 	public function getGambarById1($id)
-{
+	{
     // Ambil data gambar berdasarkan id_gambar
-    return $this->db->table('gambar')
-        ->where('id_gambar', $id)
-        ->get()
-        ->getRow();
-}
-
+		return $this->db->table('gambar')
+		->where('id_gambar', $id)
+		->get()
+		->getRow();
+	}
 
 	public function isLiked($idGambar, $idUser)
 	{
@@ -87,14 +86,22 @@ class M_galeri extends Model
 	}
 
 	public function getKomentarByGambarId($gambar_id)
-    {
-        return $this->db->table('komentar')
-            ->select('komentar.*, user.username')
-            ->join('user', 'user.id_user = komentar.user')
-            ->where('komentar.gambar', $gambar_id)
-            ->get()
-            ->getResult();
-    }
+	{
+		return $this->db->table('komentar')
+		->select('komentar.*, user.username')
+		->join('user', 'user.id_user = komentar.user')
+		->where('komentar.gambar', $gambar_id)
+		->get()
+		->getResult();
+	}
+
+	public function searchUser($username)
+	{
+		return $this->db->table('user')
+		->like('username', $username)
+		->get()
+		->getResult();
+	}
 
 
 	//CI4 Model

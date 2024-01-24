@@ -26,6 +26,16 @@ class M_album extends Model
 		->get()
 		->getResult();
 	}
+		public function tampilAlbumUserById($idUser)
+	{
+        // Ambil data album berdasarkan user ID
+		return $this->db->table($this->table)
+		->where('user', $idUser)
+		->where('deleted_at', null)
+		->orderBy('nama_album', 'ASC')
+		->get()
+		->getResult();
+	}
 	public function getGambarByAlbumId($id)
 	{
         // Ambil data gambar berdasarkan id_album

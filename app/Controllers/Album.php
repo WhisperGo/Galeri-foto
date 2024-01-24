@@ -146,22 +146,45 @@ public function hapus_album($id)
 
 public function search_user()
 {
-    if (session()->get('level')==1) {
+    $data['title'] = 'GT Gallery - Search User';
 
-        $model=new M_album();
+    echo view('photofolio/partial/header', $data);
+    echo view('photofolio/partial/top_menu');
+    echo view('photofolio/album/search_user');
+    echo view('photofolio/partial/footer');
+}
 
-        $data['title'] = 'GT Gallery - Search User';
-        $data['gambar']=$model->tampil('gambar');
-        $data['album']=$model->tampilAlbumUser('album');
+public function aksi_cari_user()
+{
+    $model = new M_galeri();
 
-        echo view('photofolio/partial/header', $data);
-        echo view('photofolio/partial/top_menu');
-        echo view('photofolio/album/search_user', $data);
-        echo view('photofolio/partial/footer');
+    $search_user = $this->request->getPost('search_user');
 
-    } else {
-        return redirect()->to('login');
-    }
+        // Panggil metode untuk mencari user berdasarkan username
+    $users = $model->searchUser($search_user);
+
+    $data['title'] = 'GT Gallery - Search Result';
+    $data['users'] = $users;
+
+    echo view('photofolio/partial/header', $data);
+    echo view('photofolio/partial/top_menu');
+    echo view('photofolio/album/search_result', $data);
+    echo view('photofolio/partial/footer');
+}
+
+public function detail_user($id)
+{
+    $model=new M_album();
+
+    $data['title'] = 'GT Gallery - Album';
+    $data['gambar']=$model->tampil('gambar');
+    $data['album']=$model->tampilAlbumUserById('album', $id);
+
+    echo view('photofolio/partial/header', $data);
+    echo view('photofolio/partial/top_menu');
+    echo view('photofolio/album/view', $data);
+    echo view('photofolio/partial/footer');
+
 }
 
 

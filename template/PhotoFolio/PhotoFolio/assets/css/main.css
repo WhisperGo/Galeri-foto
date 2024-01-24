@@ -134,26 +134,8 @@ h6 {
   background: var(--color-primary);
 }
 
-.page-header .cta-btn-danger {
-  font-family: var(--font-primary);
-  font-weight: 400;
-  font-size: 14px;
-  display: inline-block;
-  padding: 12px 40px;
-  border-radius: 4px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: 0.3s;
-  color: #fff;
-  background: #dc3545;
-}
-
 .page-header .cta-btn:hover {
   background: #2cbc85;
-}
-
-.page-header .cta-btn-danger:hover {
-  background: #f93b4e;
 }
 
 /*--------------------------------------------------------------
@@ -656,7 +638,7 @@ h6 {
   margin: 0 1px;
 }
 
-.testimonial-img {
+.testimonials .testimonial-item .testimonial-img {
   width: 90px;
   border-radius: 50%;
   border: 5px solid #474a4d;
@@ -763,7 +745,7 @@ h6 {
 }
 
 .gallery .gallery-links .details-link {
-/*  font-size: 30px;*/
+  font-size: 30px;
   line-height: 0;
 }
 
@@ -880,38 +862,16 @@ h6 {
 }
 
 .gallery-single .portfolio-info .btn-visit {
-  width: 100%; /* Sesuaikan lebar sesuai kebutuhan */
-  padding: 8px 0; /* Sesuaikan padding sesuai kebutuhan */
+  padding: 8px 40px;
   background: var(--color-primary);
   color: #fff;
   border-radius: 50px;
   transition: 0.3s;
-  display: block; /* Membuat tombol menjadi elemen blok untuk menempati lebar penuh */
-  text-align: center; /* Menengahkan teks di dalam tombol */
-  margin-bottom: 10px; /* Jarak antara tombol-tombol */
 }
 
 .gallery-single .portfolio-info .btn-visit:hover {
   background: #2cbc85;
 }
-
-.gallery-single .portfolio-info .btn-visit-danger {
-  width: 100%; /* Sesuaikan lebar sesuai kebutuhan */
-  padding: 8px 0; /* Sesuaikan padding sesuai kebutuhan */
-  background: var(--color-primary);
-  color: #fff;
-  border-radius: 50px;
-  transition: 0.3s;
-  display: block; /* Membuat tombol menjadi elemen blok untuk menempati lebar penuh */
-  text-align: center; /* Menengahkan teks di dalam tombol */
-  margin-bottom: 10px; /* Jarak antara tombol-tombol */
-  background: #dc3545;
-}
-
-.gallery-single .portfolio-info .btn-visit-danger:hover {
-  background: #f93b4e;
-}
-
 
 .gallery-single .portfolio-description h2 {
   font-size: 26px;
@@ -1174,9 +1134,9 @@ h6 {
   border-radius: 4px;
   box-shadow: none;
   font-size: 14px;
-/*  background-color: var(--color-secondary);*/
+  background-color: var(--color-secondary);
   border: 1px solid #2e3133;
-  color: #000;
+  color: #fff;
 }
 
 .contact .php-email-form input {
