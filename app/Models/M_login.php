@@ -32,4 +32,9 @@ class M_login extends Model
 	{
 		return $this->db->table($table1)->join($table2, $on, 'left')->getWhere($where)->getRow();
 	}
+
+	public function simpan($table, $data)
+	{
+		return $this->db->table($table)->insert($data);
+	}
 }

@@ -8,14 +8,16 @@ $db         = \Config\Database::connect();
 $id_user = session()->get('id');
 $user = $db->table('user')->where('id_user', $id_user)->get()->getRow();
 
-
-if (!empty($user->foto)) {
-  $foto = base_url('profile/' . $user->foto);
-} else {
-  $foto = base_url('profile/default.png');
-}
-
 ?>
+
+<style>
+  .perfect-circle {
+  width: 100px; /* Sesuaikan lebar sesuai kebutuhan Anda */
+  height: 100px; /* Sesuaikan tinggi sesuai kebutuhan Anda */
+  border-radius: 50%;
+  overflow: hidden; /* Optional: agar kontennya tidak keluar dari lingkaran */
+}
+</style>
 
 <main id="main" data-aos="fade" data-aos-delay="1500">
 
@@ -42,18 +44,25 @@ if (!empty($user->foto)) {
             <div class="row">
               <?php foreach ($users as $user): ?>
                 <div class="col-md-4 mb-4 text-center">
-                  <a href="<?=base_url('album/detail_user/' . $user->id_user)?>"><img src="<?=base_url('profile/default.png')?>" class="testimonial-img">
-                  <a href="<?=base_url('album/detail_user/' . $user->id_user)?>"><h6 class='mb-0 mt-2 text-gray-600'><?= $user->username ?></h6></a>
-                </div>
-              <?php endforeach; ?>
-            </div>
-          <?php else: ?>
-            <p class="text-center">User tidak ditemukan.</p>
-          <?php endif; ?>
+                  <?php
+                  $foto_profil = (!empty($user->foto)) ? base_url('profile/' . $user->foto) : base_url('profile/default.png');
+                  ?>
 
+                  <a href="<?=base_url('album/detail_user/' . $user->id_user)?>"><img src="<?=$foto_profil?>" class="testimonial-img" style="width: 100px; height: 100px;">
+                    <a href="<?=base_url('album/detail_user/' . $user->id_user)?>"><h6 class='mb-0 mt-2 text-gray-600'><?= $user->username ?></h6></a>
+                  </div>
+                <?php endforeach; ?>
+              </div>
+            <?php else: ?>
+              <p class="text-center">User tidak ditemukan.</p>
+            <?php endif; ?>
+
+          </div>
         </div>
       </div>
-    </div>
-  </section><!-- End Search Result Section -->
+    </section><!-- End Search Result Section -->
+
+  </main><!-- End #main -->
+
 
   </main><!-- End #main -->

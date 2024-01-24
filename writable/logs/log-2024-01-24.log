@@ -407,3 +407,26 @@ CRITICAL - 2024-01-24 11:30:26 --> Call to undefined method App\Models\M_album::
 #4 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #6 {main}
+CRITICAL - 2024-01-24 12:21:37 --> syntax error, unexpected ''level'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+#0 C:\xampp\htdocs\Galeri-foto\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('register')
+#1 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('register')
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-24 12:21:46 --> syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xampp\htdocs\Galeri-foto\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('register')
+#1 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('register')
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-24 12:26:11 --> Call to a member function isValid() on null
+#0 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(832): App\Controllers\Register->aksi_register()
+#1 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}

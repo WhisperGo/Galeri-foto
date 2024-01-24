@@ -45,7 +45,9 @@
 
 					<!-- <div class="g-recaptcha" data-sitekey="6LcEfuojAAAAANG5m1V5uLxuVdX1L9ZXYA9XUM9v" data-callback="onCaptchaVerified"></div> -->
 
-					<button type="submit" class="btn btn-primary btn-block shadow-lg btn-lg mt-5">Log in</button>
+					<button type="submit" class="btn btn-primary btn-block shadow-lg btn-lg mt-2">Log in</button>
+
+					<a href="<?=base_url('register')?>" class="btn btn-primary btn-block shadow-lg btn-lg mt-2">Create an Account</a>
 				</form>
 
 

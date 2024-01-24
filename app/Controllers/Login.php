@@ -98,4 +98,6 @@ class Login extends BaseController
         session()->destroy();
         return redirect()->to('/');
     }
+
+
 }
