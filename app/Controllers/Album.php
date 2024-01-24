@@ -31,39 +31,31 @@ class Album extends BaseController
 
     public function detail_album($id)
     {
-        if (session()->get('level') == 1) {
-            $model = new M_album();
+        $model = new M_album();
 
-            // Ambil nama_album dan deskripsi_album berdasarkan ID album
-            $nama_album = $model->getNamaAlbumById($id);
-            $deskripsi_album = $model->getDeskripsiAlbumById($id);
+        // Ambil nama_album dan deskripsi_album berdasarkan ID album
+        $nama_album = $model->getNamaAlbumById($id);
+        $deskripsi_album = $model->getDeskripsiAlbumById($id);
 
-            // Ambil data gambar berdasarkan ID album
-            $gambar_album = $model->getGambarByAlbumId($id);
+        // Verifikasi kepemilikan album
+        $isAlbumOwner = $model->isAlbumOwner($id, session()->get('id'));
 
-            // Verifikasi kepemilikan album
-            $user_id = session()->get('id');
-            $is_owner = $model->isAlbumOwner($id, $user_id);
-
-            if (!$is_owner) {
-            // Redirect atau tindakan lain untuk akses ilegal
-            return redirect()->to('/album'); // Redirect ke halaman album
-        }
+        // Ambil data gambar berdasarkan ID album
+        $gambar_album = $model->getGambarByAlbumId($id);
 
         $data['title'] = 'GT Gallery - Detail Gambar';
         $data['album'] = $model->tampil('album');
         $data['nama_album'] = $nama_album;
         $data['deskripsi_album'] = $deskripsi_album;
         $data['gambar_album'] = $gambar_album;
+        $data['isAlbumOwner'] = $isAlbumOwner; // Mengatur variabel untuk menentukan apakah pengguna adalah pemilik album
 
-        echo view('photofolio/partial/header', $data);
-        echo view('photofolio/partial/top_menu');
-        echo view('photofolio/album/detail', $data);
-        echo view('photofolio/partial/footer');
-    } else {
-        return redirect()->to('login');
-    }
+    echo view('photofolio/partial/header', $data);
+    echo view('photofolio/partial/top_menu');
+    echo view('photofolio/album/detail', $data);
+    echo view('photofolio/partial/footer');
 }
+
 
 
 public function tambah_album()
@@ -160,7 +152,7 @@ public function aksi_cari_user()
 
     $search_user = $this->request->getPost('search_user');
 
-        // Panggil metode untuk mencari user berdasarkan username
+    // Panggil metode untuk mencari user berdasarkan username
     $users = $model->searchUser($search_user);
 
     $data['title'] = 'GT Gallery - Search Result';
@@ -175,14 +167,19 @@ public function aksi_cari_user()
 public function detail_user($id)
 {
     $model=new M_album();
+    $model2 = new M_galeri();
 
     $data['title'] = 'GT Gallery - Album';
     $data['gambar']=$model->tampil('gambar');
-    $data['album']=$model->tampilAlbumUserById('album', $id);
+    $data['album']=$model->tampilAlbumUserById($id);
+
+    // Panggil metode untuk mencari user berdasarkan username
+    $users = $model2->searchUserById($id);
+    $data['users'] = $users;
 
     echo view('photofolio/partial/header', $data);
     echo view('photofolio/partial/top_menu');
-    echo view('photofolio/album/view', $data);
+    echo view('photofolio/album/view_detail', $data);
     echo view('photofolio/partial/footer');
 
 }

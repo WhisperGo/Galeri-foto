@@ -103,6 +103,15 @@ class M_galeri extends Model
 		->getResult();
 	}
 
+	public function searchUserById($id)
+	{
+		return $this->db->table('user')
+		->like('id_user', $id)
+		->get()
+		->getResult();
+	}
+
+
 
 	//CI4 Model
 	public function deletee($id)

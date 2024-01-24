@@ -14,6 +14,9 @@ $uri = service('uri');
           <h2>Detail Gambar</h2>
           <p>Di halaman ini anda dapat like, dan comment foto atau gambar yang sudah diupload.</p>
 
+
+          <a href="javascript:history.back()" class="cta-btn mt-3">Back</a>
+
           <?php foreach ($gambar_baru as $image): ?>
             <?php if ($image->user == session()->get('id')) : ?>
             <a href="<?= base_url('album/hapus_gambar/' . $uri->getSegment(3)) ?>" class="cta-btn-danger mt-3">Delete This Image</a>

@@ -12,15 +12,21 @@ $uri = service('uri');
       <div class="row d-flex justify-content-center">
         <div class="col-lg-6 text-center">
           <!-- Gunakan nama_album yang sudah diambil dari controller -->
-          <h2><?=$nama_album?></h2>
+          <h2><?= $nama_album ?></h2>
           <p><?= $deskripsi_album ?></p>
 
-          <a href="<?= base_url('album/tambah_gambar') ?>" class="cta-btn">Add New Image</a>
-          <a href="<?= base_url('album/hapus_album/' . $uri->getSegment(3)) ?>" class="cta-btn-danger">Delete This Album</a>
+          <a href="javascript:history.back()" class="cta-btn mt-3">Back</a>
+
+          <?php if ($isAlbumOwner): ?>
+            <a href="<?= base_url('album/tambah_gambar') ?>" class="cta-btn">Add New Image</a>
+            <a href="<?= base_url('album/hapus_album/' . $uri->getSegment(3)) ?>" class="cta-btn-danger">Delete This Album</a>
+          <?php endif; ?>
+
         </div>
       </div>
     </div>
   </div><!-- End Page Header -->
+
 
 
 

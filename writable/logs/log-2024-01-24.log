@@ -389,3 +389,21 @@ CRITICAL - 2024-01-24 11:12:57 --> syntax error, unexpected '.'
 #6 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #7 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #8 {main}
+CRITICAL - 2024-01-24 11:22:26 --> syntax error, unexpected '&'
+#0 C:\xampp\htdocs\Galeri-foto\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\Galeri-foto\system\Common.php(1089): CodeIgniter\View\View->render('photofolio/part...', Array, true)
+#2 C:\xampp\htdocs\Galeri-foto\app\Controllers\Album.php(152): view('photofolio/part...')
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(832): App\Controllers\Album->search_user()
+#4 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Album))
+#5 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-24 11:30:26 --> Call to undefined method App\Models\M_album::searchUser
+#0 C:\xampp\htdocs\Galeri-foto\app\Controllers\Album.php(184): CodeIgniter\Model->__call('searchUser', Array)
+#1 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(832): App\Controllers\Album->detail_user('1')
+#2 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Album))
+#3 C:\xampp\htdocs\Galeri-foto\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Galeri-foto\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Galeri-foto\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
