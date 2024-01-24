@@ -31,6 +31,7 @@ class M_album extends Model
         // Ambil data gambar berdasarkan id_album
 		return $this->db->table('gambar')
 		->where('album_gambar', $id)
+		->where('deleted_at', null)
 		->get()
 		->getResult();
 	}

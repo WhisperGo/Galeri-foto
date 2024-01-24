@@ -25,6 +25,7 @@ $uri = service('uri');
       <ul>
         <li><a href="<?=base_url('/')?>" class="<?php if($uri->getSegment(1) == ""){echo "active";}?>">Home</a></li>
         <li><a href="<?=base_url('galeri')?>" class="<?php if($uri->getSegment(1) == "galeri"){echo "active";}?>">Gallery</a></li>
+        <li><a href="<?=base_url('album/search_user')?>" class="<?php if($uri->getSegment(1) == "album"){echo "active";}?>">Search User</a></li>
         <!-- <li class="dropdown"><a href="javascript:void(0);"><span>Gallery</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
           <ul>
             <li><a href="<?=base_url('galeri')?>">Alam</a></li>
@@ -46,7 +47,7 @@ $uri = service('uri');
         <!-- <li><a href="<?=base_url('galeri/tambah_gambar')?>">Add Posts</a></li> -->
         
         <?php if(session()->has('id')): ?>
-            <li><a href="<?=base_url('album')?>" class="<?php if($uri->getSegment(1) == "album"){echo "active";}?>">My Album</a></li>
+            <li><a href="<?=base_url('album')?>" class="<?php if($uri->getSegment(1) == "album" && $uri->getSegment(2) !== "search_user"){echo "active";}?>">My Album</a></li>
             <li><a href="<?= base_url('login/log_out') ?>">Log Out</a></li>
         <?php else: ?>
             <li><a href="<?= base_url('login') ?>">Login</a></li>

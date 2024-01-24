@@ -7,7 +7,7 @@ class M_galeri extends Model
 {		
 	protected $table      = 'gambar';
 	protected $primaryKey = 'id_gambar';
-	protected $allowedFields = ['nama_gambar', 'album_gambar', 'like_gambar', 'komen_gambar', 'user'];
+	protected $allowedFields = ['judul_gambar', 'nama_gambar', 'deskripsi_gambar', 'album_gambar', 'user'];
 	protected $useSoftDeletes = true;
 	protected $useTimestamps = true;
 
@@ -54,6 +54,16 @@ class M_galeri extends Model
 		->get()
 		->getResult();
 	}
+
+	public function getGambarById1($id)
+{
+    // Ambil data gambar berdasarkan id_gambar
+    return $this->db->table('gambar')
+        ->where('id_gambar', $id)
+        ->get()
+        ->getRow();
+}
+
 
 	public function isLiked($idGambar, $idUser)
 	{

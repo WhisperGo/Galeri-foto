@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\M_album;
+use App\Models\M_galeri;
 
 class Album extends BaseController
 {
@@ -143,6 +144,26 @@ public function hapus_album($id)
     }
 }
 
+public function search_user()
+{
+    if (session()->get('level')==1) {
+
+        $model=new M_album();
+
+        $data['title'] = 'GT Gallery - Search User';
+        $data['gambar']=$model->tampil('gambar');
+        $data['album']=$model->tampilAlbumUser('album');
+
+        echo view('photofolio/partial/header', $data);
+        echo view('photofolio/partial/top_menu');
+        echo view('photofolio/album/search_user', $data);
+        echo view('photofolio/partial/footer');
+
+    } else {
+        return redirect()->to('login');
+    }
+}
+
 
     // ===================================== GAMBAR ============================================
 
@@ -206,5 +227,32 @@ public function aksi_tambah_gambar()
         return redirect()->to('login');
     }
 }
+
+public function hapus_gambar($id)
+{ 
+    if (session()->get('level') == 1) {
+        $model = new M_galeri();
+
+        // Dapatkan informasi gambar
+        $gambar = $model->getGambarById1($id);
+
+        // Pastikan gambar ditemukan dan user pemilik gambar sesuai dengan yang sedang login
+        if ($gambar && $gambar->user == session()->get('id')) {
+            // Hapus gambar
+            $model->deletee($id);
+
+            // Redirect kembali ke halaman album/detail_album/(album_gambar)
+            return redirect()->to("album/detail_album/{$gambar->album_gambar}");
+        } else {
+            // Jika gambar tidak ditemukan atau user tidak sesuai, redirect ke login
+            return redirect()->to('login');
+        }
+    } else {
+        // Jika user bukan admin, redirect ke login
+        return redirect()->to('login');
+    }
+}
+
+
 
 }

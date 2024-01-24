@@ -2,9 +2,9 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Waktu pembuatan: 23 Jan 2024 pada 19.41
--- Versi server: 10.4.24-MariaDB
+-- Host: localhost
+-- Waktu pembuatan: 24 Jan 2024 pada 02.44
+-- Versi server: 10.4.21-MariaDB
 -- Versi PHP: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -74,9 +74,9 @@ INSERT INTO `gambar` (`id_gambar`, `judul_gambar`, `nama_gambar`, `deskripsi_gam
 (3, 'Jam Tangan', 'jamtangan.jpg', NULL, 4, 1, '2024-01-22 20:33:27', NULL, NULL),
 (6, 'Buah-buahan', 'Screenshot 2023-10-24 220323.png', 'tes buah 1', 4, 1, '2024-01-23 20:49:14', NULL, NULL),
 (12, 'Jalan jalan ke hutan bakau', 'gambar_1_1706019873.png', 'Kenang - kenangan kelas 12', 4, 1, '2024-01-23 21:24:33', NULL, NULL),
-(14, 'Selancaran', 'gambar_1_1706027801.jpg', 'Gambar orang selancaran', 1, 1, '2024-01-23 23:36:41', NULL, NULL),
-(15, 'Pegunungan', 'gambar_1_1706027919.jpg', 'Gambar pegunungan contoh', 1, 1, '2024-01-23 23:38:39', NULL, NULL),
-(16, 'Aliran Sungai', 'gambar_1_1706028029.jpg', 'Gambar Aliran Sungai ', 1, 1, '2024-01-23 23:40:29', NULL, NULL),
+(14, 'Selancaran', 'gambar_1_1706027801.jpg', 'Gambar orang selancaran', 1, 1, '2024-01-23 23:36:41', '2024-01-24 08:17:35', NULL),
+(15, 'Pegunungan', 'gambar_1_1706027919.jpg', 'Gambar pegunungan contoh', 1, 1, '2024-01-23 23:38:39', '2024-01-24 08:23:16', NULL),
+(16, 'Aliran Sungai', 'gambar_1_1706028029.jpg', 'Gambar Aliran Sungai ', 1, 1, '2024-01-23 23:40:29', '2024-01-24 08:34:49', '2024-01-24 08:34:49'),
 (17, 'Laut dengan perahu', 'gambar_1_1706028141.jpg', 'Pemandangan sore hari yang cukup apik', 1, 1, '2024-01-23 23:42:21', NULL, NULL),
 (18, 'Pemandangan New York', 'gambar_1_1706028297.jpg', 'Foto ini diambil dengan drone dari jarak jauh', 2, 1, '2024-01-23 23:44:57', NULL, NULL),
 (19, 'Twin tower Malaysia', 'gambar_1_1706028361.jpg', 'Penampakan twin tower petronas di malaysia saat malam hari', 2, 1, '2024-01-23 23:46:01', NULL, NULL);
@@ -104,7 +104,8 @@ CREATE TABLE `komentar` (
 INSERT INTO `komentar` (`id_komentar`, `gambar`, `user`, `isi_komentar`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 12, 1, 'Mantap gambarnya gan!', '2024-01-24 00:46:21', NULL, NULL),
 (5, 12, 2, 'Lanjutkan usahamu!', '2024-01-24 01:40:18', NULL, NULL),
-(6, 17, 1, 'Tes', '2024-01-24 01:40:49', NULL, NULL);
+(6, 17, 1, 'Tes', '2024-01-24 01:40:49', NULL, NULL),
+(7, 16, 1, 'Tes halo gan', '2024-01-24 08:10:37', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -148,7 +149,8 @@ CREATE TABLE `like` (
 
 INSERT INTO `like` (`id_like`, `gambar`, `user`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (4, 12, 1, '2024-01-23 23:56:40', NULL, NULL),
-(5, 12, 2, '2024-01-24 00:20:52', NULL, NULL);
+(5, 12, 2, '2024-01-24 00:20:52', NULL, NULL),
+(6, 16, 1, '2024-01-24 08:10:13', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -271,7 +273,7 @@ ALTER TABLE `gambar`
 -- AUTO_INCREMENT untuk tabel `komentar`
 --
 ALTER TABLE `komentar`
-  MODIFY `id_komentar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_komentar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `level`
@@ -283,7 +285,7 @@ ALTER TABLE `level`
 -- AUTO_INCREMENT untuk tabel `like`
 --
 ALTER TABLE `like`
-  MODIFY `id_like` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_like` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`

@@ -1,3 +1,9 @@
+<?php 
+
+$uri = service('uri');
+
+?>
+
 <main id="main" data-aos="fade" data-aos-delay="1500">
 
   <!-- ======= End Page Header ======= -->
@@ -8,7 +14,10 @@
           <h2>Detail Gambar</h2>
           <p>Di halaman ini anda dapat like, dan comment foto atau gambar yang sudah diupload.</p>
 
-          <!-- <a href="javascript:void(0);" class="cta-btn">My Other Gallery</a> -->
+          <?php foreach ($gambar_baru as $image): ?>
+            <?php if ($image->user == session()->get('id')) : ?>
+            <a href="<?= base_url('album/hapus_gambar/' . $uri->getSegment(3)) ?>" class="cta-btn-danger mt-3">Delete This Image</a>
+          <?php endif; ?>
 
         </div>
       </div>
@@ -18,7 +27,7 @@
   <!-- ======= Gallery Single Section ======= -->
   <section id="gallery-single" class="gallery-single">
     <div class="container">
-     <?php foreach ($gambar_baru as $image): ?>
+
       <div class="position-relative h-100 text-center">
         <img src="<?= base_url('images/' . $image->nama_gambar) ?>" class="img-fluid mx-auto rounded" style="object-fit: cover; width: 75%; height: 75%;" alt="">
       </div>
