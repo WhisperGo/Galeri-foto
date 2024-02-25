@@ -14,8 +14,7 @@ $uri = service('uri');
 <!-- ======= Header ======= -->
 <header id="header" class="header d-flex align-items-center fixed-top">
   <div class="container-fluid d-flex align-items-center justify-content-between">
-
-    <a href="<?=base_url('/')?>" class="logo d-flex align-items-center  me-auto me-lg-0">
+    <a href="<?=base_url('/')?>" class="logo d-flex align-items-center me-auto me-lg-0">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <img src="<?=base_url('@mazer/prixier/img/logo_contoh_tengah.svg')?>" width=75% style="margin-left: 12px;">
       <!-- <h1>GT</h1> -->
@@ -26,6 +25,7 @@ $uri = service('uri');
         <li><a href="<?=base_url('/')?>" class="<?php if($uri->getSegment(1) == ""){echo "active";}?>">Home</a></li>
         <li><a href="<?=base_url('galeri')?>" class="<?php if($uri->getSegment(1) == "galeri"){echo "active";}?>">Gallery</a></li>
         <li><a href="<?=base_url('album/search_user')?>" class="<?php if($uri->getSegment(1) == "album" && $uri->getSegment(2) == "search_user"){echo "active";}?>">Search User</a></li>
+
         <!-- <li class="dropdown"><a href="javascript:void(0);"><span>Gallery</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
           <ul>
             <li><a href="<?=base_url('galeri')?>">Alam</a></li>
@@ -57,10 +57,10 @@ $uri = service('uri');
     </nav><!-- .navbar -->
 
     <div class="header-social-links">
-      <a href="javascript:void(0);" class="twitter"><i class="bi bi-twitter"></i></a>
-      <a href="javascript:void(0);" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="javascript:void(0);" class="instagram"><i class="bi bi-instagram"></i></a>
-      <a href="javascript:void(0);" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      <a href="javascript:void(0);" class="twitter"></a>
+      <a href="javascript:void(0);" class="facebook"></a>
+      <a href="javascript:void(0);" class="instagram"></a>
+      <a href="javascript:void(0);" class="linkedin"></a>
     </div>
     <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
     <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
